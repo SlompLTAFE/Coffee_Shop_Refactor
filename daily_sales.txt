@@ -1,0 +1,3 @@
+Orders: 3
+Sales: $139.28
+Average order: $46.43
