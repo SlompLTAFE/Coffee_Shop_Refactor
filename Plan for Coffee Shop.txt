@@ -1,0 +1,77 @@
+Needs:
+
+Barista should be able to:
+-Create order with drink NAME, SIZE and CUSTOMIZATION +
+-See total price including SIZE, MILK and EXTRAS +
+
+Customer should be able to:
+-Earn 1 point per dollar spent +
+-Redeem 100 points for a small free drink +
+
+Member should be able to:
+Get 10% discount on all purchases +
+
+Owner should be able to:
+-Be able to see a summary of daily sales saved to a file. +
+-Staff drinks to be free but tracked +
+
+
+1. Class Design
+
+Create at least these classes with clear responsibilities:
+
+MenuItem - Represents one menu item with pricing
+Order - Manages collection of items, calculates totals
+Customer - Holds customer information
+LoyaltyProgram - Manages points earning and redemption
+Custom exception classes (minimum 3)
+2. Separation of Concerns
+
+Business logic separated from I/O
+Pricing logic centralized (not scattered)
+Each class has single, clear responsibility
+No global variables (except perhaps constants)
+3. Composition & Inheritance
+
+Use composition where appropriate (Order HAS-A MenuItem)
+Consider inheritance if types emerge (optional, but think about it)
+Demonstrate understanding of IS-A vs HAS-A
+4. Error Handling
+
+Use custom exceptions (not print statements for errors)
+Appropriate exception messages with context
+Demonstrate exception hierarchy
+5. Documentation
+
+All classes documented
+All public methods documented
+Type hints on method signatures
+Deliverables¶
+coffee_shop_refactored.py - Your OOP solution
+coffee_shop_exceptions.py - Custom exception hierarchy
+test_coffee_shop.py - Unit tests (provided template, you complete)
+
+
+ TESTING
+
+Behavioral Tests
+Your refactored code must behave identically to the original for these scenarios:
+
+Order small latte → $4.50
+Order medium oat milk latte → $5.85 + oat milk surcharge
+Member orders latte → 10% discount applied
+Earn points on $10 order → 10 points added
+Redeem 100 points → Free small drink
+Staff drink → $0.00 but tracked
+Run unit tests:
+
+
+python -m unittest test_coffee_shop.py
+All tests should pass.
+
+Code Quality Checks
+No functions longer than 20 lines
+No repeated code (DRY principle)
+Clear class and method names
+Type hints on all methods
+Google docstrings on all public methods

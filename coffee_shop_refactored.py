@@ -273,6 +273,8 @@ class Order:
         )
         order_item.is_free = True
     
+# Everything below is intentionally seperated regarding the I/O seperation specified in the Session 7 Page (just to make it easier to keep track of.).
+    
 class SalesTracker:
     """Track completed coffee shop orders and sales."""
 
